@@ -1,6 +1,6 @@
 {
     "version": "30_dev64",
-    "description": "CodeWalker GTA V 3D Map + Editor",  
+    "description": "CodeWalker GTA V 3D Map + Editor",
     "homepage": "https://www.gta5-mods.com/tools/codewalker-gtav-interactive-3d-map",
     "notes": [
         "Packed by Bobrokus 📦✅"
@@ -9,7 +9,7 @@
         "64bit": {
             "url": "https://files.gta5-mods.com/uploads/codewalker-gtav-interactive-3d-map/1cfcd8-CodeWalker30_dev46.zip",
             "hash": "af62afb149c666f13fcc052cb42f7fcdf6b098e05dc4a6f88f7bb4ecf083ed3b",
-            "extract_dir":"CodeWalker30_dev46",
+             "extract_dir":"CodeWalker30_dev46",
         }
     },
     "persist": [
