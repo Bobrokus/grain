@@ -4,4 +4,5 @@
 ## Apps:
 | Name | Version |
 |-|-|
-| [CodeWalker](https://github.com/dexyfex/CodeWalker) | v30_dev46 | 
+| [CodeWalker](https://github.com/dexyfex/CodeWalker) | v30_dev46 |
+
