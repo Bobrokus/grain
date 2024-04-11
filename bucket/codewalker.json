@@ -16,7 +16,7 @@
     "persist": [
         "CodeWalker.exe.config"
     ],
-    "bin": "CodeWalker.exe"
+    "bin": "CodeWalker.exe",
     "shortcuts": [
         ["CodeWalker.exe", "CodeWalker"],
         ["CodeWalker RPF Explorer.exe", "CodeWalker RPF Explorer"],
