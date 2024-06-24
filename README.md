@@ -1,6 +1,6 @@
 [![Tests](https://github.com/Bobrokus/grain/actions/workflows/ci.yml/badge.svg)](https://github.com/Bobrokus/grain/actions/workflows/ci.yml)
 
-# Grain 🌾 
+# Grain 🌾
 
 ### My Personal Scoop Bucket 🪣
 
