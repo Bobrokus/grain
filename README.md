@@ -5,6 +5,7 @@
 ### My Personal Scoop Bucket 🪣
 
 ## Apps
+**NOTE:** *App versions might not be up-to-date with the bucket*
 | Name | Version |
 |-|-|
 | [CodeWalker](https://github.com/dexyfex/CodeWalker) | 30_dev46 |
