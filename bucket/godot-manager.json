@@ -15,7 +15,8 @@
     ],
   
     "persist": [
-      "central_store.json"
+      "central_store.json",
+      "godot_data/versions"
     ],
     
     "shortcuts": [
