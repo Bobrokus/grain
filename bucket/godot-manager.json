@@ -1,31 +1,25 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    
-    "version": "0.2.7",
+    "version": "0.2.8",
     "description": "A project, version, and addons/plugins manager for Godot.",
     "homepage": "https://github.com/eumario/godot-manager",
     "license": "MIT",
-    
     "url": "https://github.com/eumario/godot-manager/releases/download/v0.2.7/godotmanager-windows-v0.2.7.zip",
-    "hash": "06707c4ce770d4e377683ff0883ba18cd59b85f8caee3681bacf2332221b998e",
-
+    "hash": "",
     "pre_install": [
-      "if (!(Test-Path $dir/central_store.json)) { New-Item $dir/central_store.json }",
-      "New-Item $dir/._sc_"
+        "if (!(Test-Path $dir/central_store.json)) { New-Item $dir/central_store.json }",
+        "New-Item $dir/._sc_"
     ],
-  
     "persist": [
-      "central_store.json",
-      "godot_data/versions"
+        "central_store.json",
+        "godot_data/versions"
     ],
-    
     "shortcuts": [
         [
             "GodotManager.exe",
             "Godot Manager"
         ]
     ],
-    
     "checkver": "github",
     "autoupdate": {
         "architecture": {
