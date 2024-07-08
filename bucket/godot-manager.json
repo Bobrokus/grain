@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "description": "A project, version, and addons/plugins manager for Godot.",
     "homepage": "https://github.com/eumario/godot-manager",
     "license": "MIT",
