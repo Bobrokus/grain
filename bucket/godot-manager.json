@@ -10,13 +10,13 @@
     "hash": "06707c4ce770d4e377683ff0883ba18cd59b85f8caee3681bacf2332221b998e",
 
     "pre_install": [
-      "if (!(Test-Path $dir/central_store.json)) { New-Item $dir/central_store.json }",
-      "New-Item $dir/._sc_"
+        "if (!(Test-Path $persist_dir/central_store.json)) { New-Item $dir/central_store.json }",
+        "New-Item $dir/._sc_"
     ],
   
     "persist": [
-      "central_store.json",
-      "godot_data/versions"
+        "central_store.json",
+        "godot_data/versions"
     ],
     
     "shortcuts": [
@@ -28,10 +28,6 @@
     
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/eumario/godot-manager/releases/download/v$version/godotmanager-windows-v$version.zip"
-            }
-        }
+        "url": "https://github.com/eumario/godot-manager/releases/download/v$version/godotmanager-windows-v$version.zip"
     }
 }
