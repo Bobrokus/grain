@@ -20,6 +20,7 @@
     "post_install": [
         "if (!(Test-Path $persist_dir/profiles/*)) {",
             "Write-Host Creating profile",
+            "New-Item $persist_dir/profiles/default -Type Directory",
             "zen -CreateProfile \"Default $persist_dir\\profiles\\default\"",
         "}"
     ],
