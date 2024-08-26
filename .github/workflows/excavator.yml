@@ -5,24 +5,36 @@ on:
     - cron: '20 */4 * * *'
 name: Excavator
 jobs:
-  checkver:
-    name: Run Checkver
+  update:
+    name: ♻️ Update manifests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - name: Scoop Checkver Action
-      # You may pin to the exact commit or the version.
-      # uses: foosel/scoop-checkver-action@52193635d258eb9546d212c5ba85eed12002ccca
-        uses: foosel/scoop-checkver-action@v1
+      - name: 📥 Checkout repo
+        uses: actions/checkout@master
+      - name: ♻️ Run autoupdate
+        uses: foosel/scoop-checkver-action@main
         with:
-          # Path to the bucket to run checkver on, relative to the github action workspace.
-          bucket: ../../bucket
-          # The app manifests to run on, comma separated. Defaults to '*''.
-          # apps:
-          # Set to any string for a dry-run.
-          # dry: # optional, default is 
-          # Set to any string to force upgrade even if not needed. Ignored for dry runs.
-          # force: # optional, default is 
+          bucket: bucket
+          force: ${{ github.event.inputs.force }}
+      - name: 🚀 Deploy changes
+        run: |
+          # set git author
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          # create individual commit per updated manifest
+          while read file; do
+            if [[ $file == bucket/* ]] && [[ $file == *.json ]]; then
+              version=$(cat $file | jq -r .version)
+              manifest=$(basename $file .json)
+              message="$manifest: Update to version $version"
+              git add "$file"
+              git commit -m "$message"
+            fi
+          done < <(git diff --name-only)
+
+          # finally push
+          git push
   excavate:
     name: Excavate
     runs-on: windows-latest
