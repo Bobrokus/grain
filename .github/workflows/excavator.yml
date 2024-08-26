@@ -7,7 +7,7 @@ name: Excavator
 jobs:
   checkver:
     name: Run Checkver
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Scoop Checkver Action
       # You may pin to the exact commit or the version.
