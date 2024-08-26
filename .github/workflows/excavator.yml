@@ -5,6 +5,23 @@ on:
     - cron: '20 */4 * * *'
 name: Excavator
 jobs:
+  checkver:
+    name: Run Checkver
+    runs-on: windows-latest
+    steps:
+      - name: Scoop Checkver Action
+      # You may pin to the exact commit or the version.
+      # uses: foosel/scoop-checkver-action@52193635d258eb9546d212c5ba85eed12002ccca
+        uses: foosel/scoop-checkver-action@v1
+        with:
+          # Path to the bucket to run checkver on, relative to the github action workspace.
+          bucket: ./bucket
+          # The app manifests to run on, comma separated. Defaults to '*''.
+          # apps:
+          # Set to any string for a dry-run.
+          # dry: # optional, default is 
+          # Set to any string to force upgrade even if not needed. Ignored for dry runs.
+          # force: # optional, default is 
   excavate:
     name: Excavate
     runs-on: windows-latest
